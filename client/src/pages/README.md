@@ -1,81 +1,70 @@
-# Service Provider Onboarding Portal
+# Pages
 
-A full-stack MERN application for service provider registration, profile onboarding, document verification, and admin approval management.
+This folder contains the main React pages for the Service Provider Onboarding Portal.
 
-## Features
+## Pages
 
-### Provider
+### Login.jsx
+Handles user authentication.
 
-- Provider registration and login
-- JWT-based authentication
-- Complete provider profile
-- Service category selection
-- Skills and experience
-- Service location
-- Profile photo upload
-- Verification document upload
-- Application status tracking
-- Profile editing
-- Protected provider routes
-
-### Admin
-
+- Provider login
 - Admin login
-- Dashboard statistics
+- JWT token handling
+- Role-based navigation
+- Redirects providers to Provider Dashboard
+- Redirects admins to Admin Dashboard
+
+### RegisterPage.jsx
+Handles new provider registration.
+
+- Provider name
+- Email
+- Password
+- Account creation
+- Registration validation
+- Redirect to Login page after successful registration
+
+### ProviderDashboard.jsx
+Main dashboard for service providers.
+
+Features:
+
+- View provider profile
+- Update personal information
+- Add service categories
+- Add skills
+- Add experience
+- Add bio
+- Add service location
+- Upload profile photo
+- Upload verification documents
+- Submit application
+- View application status
+- View rejection remarks
+
+### AdminDashboard.jsx
+Main dashboard for administrators.
+
+Features:
+
+- View dashboard statistics
 - View all providers
 - Search providers
-- Filter by application status
+- Filter providers by status
 - Pagination
-- View complete provider details
+- View provider details
 - View profile photo
 - View verification documents
 - Approve applications
 - Reject applications
 - Add rejection remarks
-- Protected admin routes
 
-## Tech Stack
+## Routing
 
-### Frontend
-
-- React
-- Vite
-- Axios
-- React Router
-
-### Backend
-
-- Node.js
-- Express.js
-- MongoDB
-- Mongoose
-- JWT
-- bcryptjs
-- Multer
-- CORS
-
-## Project Structure
+The pages are connected through React Router.
 
 ```text
-Dashboard/
-│
-├── client/
-│   ├── src/
-│   │   ├── api/
-│   │   ├── pages/
-│   │   ├── App.jsx
-│   │   └── main.jsx
-│   └── package.json
-│
-├── server/
-│   ├── config/
-│   ├── controllers/
-│   ├── middleware/
-│   ├── models/
-│   ├── routes/
-│   ├── uploads/
-│   ├── .env
-│   ├── server.js
-│   └── package.json
-│
-└── README.md
+/login
+/register
+/provider
+/admin
